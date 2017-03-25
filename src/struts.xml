@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<struts>
+	<!-- 1.指定请求路径后缀 -->
+	<constant name="struts.action.extension" value="action" />
+	<!-- 2.参数拦截器 -->
+	<interceptor class="edu.jyu.interceptor.ParametersInterceptor" />
+	<!-- 3.定义一个action -->
+	<action name="Hello" class="edu.jyu.action.HelloAction" method="execute">
+		<result name="success">/index.jsp</result>
+	</action>
+</struts>
