@@ -9,4 +9,16 @@
     <welcome-file>default.htm</welcome-file>
     <welcome-file>default.jsp</welcome-file>
   </welcome-file-list>
+  
+  <!-- 配置JStruts2核心拦截器 -->
+  <filter>
+  	<filter-name>JStruts2</filter-name>
+  	<filter-class>edu.jyu.filter.StrutsPrepareAndExecuteFilter</filter-class>
+  </filter>
+  <filter-mapping>
+  	<filter-name>JStruts2</filter-name>
+	<!-- 拦截路径 -->
+  	<url-pattern>/*</url-pattern>
+  </filter-mapping>
+  
 </web-app>
